@@ -24,9 +24,6 @@ typedef enum {
 PILOT_STATE;
 class J1772Pilot {
   PILOT_STATE m_State;
-#ifndef PAFC_PWM
-  DigitalPin pin;
-#endif // !PAFC_PWM
 public:
   J1772Pilot() {
   }

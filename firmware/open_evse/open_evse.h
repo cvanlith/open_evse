@@ -284,8 +284,7 @@ extern AutoCurrentCapacityController g_ACCController;
 //#define GFI_TESTING
 
 // phase and frequency correct PWM 1/8000 resolution
-// when not defined, use fast PWM -> 1/250 resolution
-#define PAFC_PWM
+//#define PAFC_PWM
 
 // glynhudson reports that LCD gets corrupted by EMC testing during CE
 // certification.. redraw display periodically when enabled
@@ -463,18 +462,10 @@ extern AutoCurrentCapacityController g_ACCController;
 #define CHARGINGAC_IDX 1
 #endif // !RELAY_AUTO_PWM_PIN
 
-// obsolete LED pin
-//#define RED_LED_REG &PIND
-//#define RED_LED_IDX 5
-// obsolete LED pin
-//#define GREEN_LED_REG &PINB
-//#define GREEN_LED_IDX 5
 #endif // OPENEVSE_2
 
 // N.B. if PAFC_PWM is enabled, then pilot pin can be PB1 or PB2
-// if using fast PWM (PAFC_PWM disabled) pilot pin *MUST* be PB2
 #define PILOT_REG &PINB
-#define PILOT_IDX 2
 
 #ifdef MENNEKES_LOCK
 // requires external 12V H-bridge driver such as Polulu 1451
